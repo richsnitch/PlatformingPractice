@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clvhg5x44p7q7"
+path="res://.godot/imported/world wanderer.ogg-8a28ccc82090501a11753e210bae0d63.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sunny Land/SunnyLand Music/adventure pack 2 ogg/world wanderer.ogg"
+dest_files=["res://.godot/imported/world wanderer.ogg-8a28ccc82090501a11753e210bae0d63.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

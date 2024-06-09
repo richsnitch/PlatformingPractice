@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://bya2h2h0svm32"]
+
+[ext_resource type="Texture2D" uid="uid://dchjs0lx31k51" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-1.png" id="1_duxur"]
+[ext_resource type="Script" path="res://Collectables/cherry.gd" id="1_hrund"]
+[ext_resource type="Texture2D" uid="uid://dojqqrf11vpl0" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-2.png" id="2_iq0lt"]
+[ext_resource type="Texture2D" uid="uid://b1yw8d5wcdhfq" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-3.png" id="3_agbio"]
+[ext_resource type="Texture2D" uid="uid://dupvwpaukcpdn" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-4.png" id="4_5uql6"]
+[ext_resource type="Texture2D" uid="uid://db4bt5px0cmfw" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-5.png" id="5_s0i82"]
+[ext_resource type="Texture2D" uid="uid://duvv13xuj6emd" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-6.png" id="6_03yjp"]
+[ext_resource type="Texture2D" uid="uid://c7assymwyg1pq" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-7.png" id="7_0sa0c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_todmv"]
+radius = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_scqhq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_duxur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iq0lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_agbio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5uql6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s0i82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_03yjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0sa0c")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Cherry" type="Area2D"]
+script = ExtResource("1_hrund")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_todmv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_scqhq")
+animation = &"Idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

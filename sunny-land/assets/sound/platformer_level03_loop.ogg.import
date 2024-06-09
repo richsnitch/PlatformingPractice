@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bavehk2b0fsyb"
+path="res://.godot/imported/platformer_level03_loop.ogg-dfaca96860c4a31f07fbaaa608a65eb4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sunny Land/sunny-land/assets/sound/platformer_level03_loop.ogg"
+dest_files=["res://.godot/imported/platformer_level03_loop.ogg-dfaca96860c4a31f07fbaaa608a65eb4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
