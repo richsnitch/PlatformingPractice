@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bfka5kyr180l"]
+[gd_scene load_steps=21 format=3 uid="uid://bfka5kyr180l"]
 
 [ext_resource type="Texture2D" uid="uid://c2j0w21lg3kv" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="1_8xd6g"]
 [ext_resource type="Texture2D" uid="uid://bu4472rcavrvw" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-1.png" id="1_ayg0k"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dtgtg2igtrjcb" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-1.png" id="5_vwhog"]
 [ext_resource type="Texture2D" uid="uid://bor5cxb8f3q81" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-2.png" id="6_gjqod"]
 [ext_resource type="Texture2D" uid="uid://cch1petmprxlm" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-6.png" id="6_n0sck"]
+[ext_resource type="AudioStream" uid="uid://c80eb8l7g7bcq" path="res://Sound Effects/geometry-dash-death-made-with-Voicemod.mp3" id="14_5nfqs"]
+[ext_resource type="AudioStream" uid="uid://b6utocn8jqtxw" path="res://Sound Effects/minecraft_hit_soundmp3converter.mp3" id="15_nvcex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnddu"]
 size = Vector2(20, 12)
@@ -108,6 +110,14 @@ shape = SubResource("RectangleShape2D_uao6m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
 position = Vector2(0, -5.25)
 shape = SubResource("RectangleShape2D_nhasy")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="DeathSoundEffect" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("14_5nfqs")
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("15_nvcex")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

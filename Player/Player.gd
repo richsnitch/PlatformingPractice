@@ -10,9 +10,24 @@ var isClimbing = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
+@onready var pause_menu = $Camera2D/PauseMenu
+var paused = false
 
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		pauseMenu()
+
+func pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+	
+	paused = !paused
+	
 func _physics_process(delta):
-	# print(canClimb)
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction == -1:
 		get_node("AnimatedSprite2D").flip_h = true
@@ -24,6 +39,8 @@ func _physics_process(delta):
 		if direction:
 			velocity.x = direction * SPEED
 			# If shift is being held down and the player is facing right
+			#if Input.is_action_just_pressed("sprint"):
+				# $Sounds/Accelerate.play()
 			if Input.is_action_pressed("sprint") and direction == 1:
 				velocity.x += speed_bonus
 			# If shift is being held down and the player is facing left
@@ -42,7 +59,6 @@ func _physics_process(delta):
 	elif canClimb == true:
 		_player_can_climb(direction)
 			
-	
 	if velocity.y > 0 and canClimb == false:
 		anim.play("Fall")
 	elif velocity.y < 0 and canClimb == false:
@@ -50,8 +66,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		anim.play("Jump")
+		_player_jump(0)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -80,3 +95,13 @@ func _player_can_climb(direction):
 		direction = Input.get_axis("ui_left", "ui_right")
 		velocity.x = direction * SPEED
 		isClimbing = false 
+		
+func _player_jump(jump_boost):
+	if jump_boost == 0:
+		$Sounds/Jump.play()
+		velocity.y = JUMP_VELOCITY
+	else:
+		$Sounds/JumpPad.play()
+		velocity.y = JUMP_VELOCITY + jump_boost
+		
+	anim.play("Jump")
