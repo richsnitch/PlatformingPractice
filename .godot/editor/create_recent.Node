@@ -1,0 +1,15 @@
+Label
+Button
+Control
+VBoxContainer
+MarginContainer
+TextureButton
+AudioStreamPlayer2D
+CollisionShape2D
+Area2D
+Node2D
+TileMap
+ParallaxBackground
+Sprite2D
+Timer
+AnimatedSprite2D

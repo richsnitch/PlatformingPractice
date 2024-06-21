@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b11nepduvx1an"]
+
+[ext_resource type="Script" path="res://Settings.gd" id="1_wo7nu"]
+[ext_resource type="Texture2D" uid="uid://d2v5qmclm8thr" path="res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Magical Road/Layers/back.png" id="2_hgpev"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_wo7nu")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(10.2857, 2.7)
+texture = ExtResource("2_hgpev")
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 208.0
+offset_bottom = 112.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]

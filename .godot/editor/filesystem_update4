@@ -1,0 +1,14 @@
+res://Ladder.gd
+res://level_select.gd
+res://Autoloads/MusicController.gd
+res://Settings.gd
+res://settings.tscn
+res://main.gd
+res://main.tscn
+res://world.tscn
+res://Player/Player.tscn
+res://level_2.tscn
+res://pause_menu.tscn
+res://level_select.tscn
+res://world.gd
+res://Label.gd

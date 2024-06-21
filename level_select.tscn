@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://2lfd5iyyfed"]
+
+[ext_resource type="Texture2D" uid="uid://vrtolh13b2rf" path="res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Colorful Environment/PNG/layers/background-sky.png" id="1_mq1o8"]
+[ext_resource type="Script" path="res://level_select.gd" id="1_o8vf1"]
+[ext_resource type="Texture2D" uid="uid://c68gxrr4ksk33" path="res://Buttons/level1button.png" id="3_a34r4"]
+[ext_resource type="Texture2D" uid="uid://ny6i7p6sh5qe" path="res://Buttons/level1buttonpressed.png" id="4_yios2"]
+[ext_resource type="Texture2D" uid="uid://bbqhdki6uvaxh" path="res://Buttons/level1buttonhover.png" id="5_eu3vp"]
+
+[node name="Level Select" type="Node2D"]
+script = ExtResource("1_o8vf1")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(72, 3.68182)
+texture = ExtResource("1_mq1o8")
+
+[node name="Level 1" type="Button" parent="."]
+offset_left = 112.0
+offset_top = 96.0
+offset_right = 392.0
+offset_bottom = 224.0
+text = "Level 1"
+
+[node name="Level 2" type="Button" parent="."]
+offset_left = 436.0
+offset_top = 96.0
+offset_right = 716.0
+offset_bottom = 224.0
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 96.0
+offset_right = 1040.0
+offset_bottom = 224.0
+text = "Level 3"
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 168.0
+offset_bottom = 72.0
+text = "Main Menu"
+
+[node name="TextureButton1" type="TextureButton" parent="."]
+offset_left = 128.0
+offset_top = 240.0
+offset_right = 384.0
+offset_bottom = 496.0
+texture_normal = ExtResource("3_a34r4")
+texture_pressed = ExtResource("4_yios2")
+texture_hover = ExtResource("5_eu3vp")
+
+[connection signal="pressed" from="Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="TextureButton1" to="." method="_on_texture_button_1_pressed"]

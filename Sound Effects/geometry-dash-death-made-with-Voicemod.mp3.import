@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c80eb8l7g7bcq"
+path="res://.godot/imported/geometry-dash-death-made-with-Voicemod.mp3-5b52bbd3d3e06931e5ed5b559c29bb1f.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/geometry-dash-death-made-with-Voicemod.mp3"
+dest_files=["res://.godot/imported/geometry-dash-death-made-with-Voicemod.mp3-5b52bbd3d3e06931e5ed5b559c29bb1f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

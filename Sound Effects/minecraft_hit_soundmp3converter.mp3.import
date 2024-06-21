@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6utocn8jqtxw"
+path="res://.godot/imported/minecraft_hit_soundmp3converter.mp3-aa7acda05a9d945b4112f709facd4f16.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/minecraft_hit_soundmp3converter.mp3"
+dest_files=["res://.godot/imported/minecraft_hit_soundmp3converter.mp3-aa7acda05a9d945b4112f709facd4f16.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
