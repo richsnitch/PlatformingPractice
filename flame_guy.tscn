@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ru2ok53sgq6i"]
+
+[ext_resource type="Texture2D" uid="uid://b5av3pmfsx2sx" path="res://assets/flameguy.png" id="1_4bpsh"]
+[ext_resource type="Script" path="res://flame_guy.gd" id="1_c7855"]
+[ext_resource type="Script" path="res://FlameGuy Messages.gd" id="3_c0osf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10yjm"]
+size = Vector2(84, 52)
+
+[node name="FlameGuy" type="CharacterBody2D"]
+script = ExtResource("1_c7855")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(49, 38)
+texture = ExtResource("1_4bpsh")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+position = Vector2(72, 67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(-23, -24)
+shape = SubResource("RectangleShape2D_10yjm")
+
+[node name="FlameGuy Messages" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("3_c0osf")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
