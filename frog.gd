@@ -4,6 +4,7 @@ var SPEED = 50
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
+var timer := Timer.new()
 
 func _ready():
 	get_node("AnimatedSprite2D").play("Idle")
@@ -48,7 +49,9 @@ func _on_player_death_body_entered(body):
 func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		$Sounds/Hurt.play()
-		Game.playerHP -= 3
+		Game.playerHP -= 30
+
+		body._player_hurt()
 		death()
 
 func death():
