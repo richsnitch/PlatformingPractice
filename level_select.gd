@@ -13,3 +13,6 @@ func _on_main_menu_pressed():
 
 func _on_texture_button_1_pressed():
 	get_tree().change_scene_to_file("res://world.tscn")
+
+func _on_level_3_pressed():
+	get_tree().change_scene_to_file("res://level_3.tscn")

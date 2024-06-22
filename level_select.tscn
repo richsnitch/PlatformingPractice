@@ -53,5 +53,6 @@ texture_hover = ExtResource("5_eu3vp")
 
 [connection signal="pressed" from="Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level 3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="TextureButton1" to="." method="_on_texture_button_1_pressed"]
