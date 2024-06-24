@@ -16,6 +16,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var pause_menu = $Camera2D/PauseMenu
 var paused = false
 
+#func _ready():
+	#HealthBar.init_health(Game.playerHP)
+	
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		pauseMenu()
@@ -95,7 +98,7 @@ func _player_hurt():
 			_player_gains_health()
 	
 func _player_gains_health():
-	while Game.playerHP != 90:
+	while Game.playerHP < 90:
 		await get_tree().create_timer(.5).timeout
 		Game.playerHP += 1
 	isPlayerDamaged = false
@@ -127,3 +130,7 @@ func _player_jump(jump_boost):
 		velocity.y = JUMP_VELOCITY + jump_boost
 		
 	anim.play("Jump")
+
+#func _set_health(value):
+	#super._set_health(value)
+	#HealthBar.health = health
