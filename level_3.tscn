@@ -13,7 +13,6 @@ size = Vector2(32, 48)
 script = ExtResource("1_xr1ou")
 
 [node name="Player" parent="." instance=ExtResource("2_smdrs")]
-top_level = true
 position = Vector2(72, 288)
 
 [node name="TileMap" parent="." instance=ExtResource("3_tq7y0")]

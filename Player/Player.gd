@@ -1,32 +1,19 @@
 extends CharacterBody2D
 
-const SPEED = 150.0
+var SPEED = 150.0
 const JUMP_VELOCITY = -400.0
 const speed_bonus = 50.0
 const climb_speed = 50
 var canClimb = false
 var isClimbing = false
 var inArea
+var used_jumppad = false
+var canMove = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
-@onready var pause_menu = $Camera2D/PauseMenu
-var paused = false
 
-func _process(delta):
-	if Input.is_action_just_pressed("pause"):
-		pauseMenu()
-
-func pauseMenu():
-	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-	else:
-		pause_menu.show()
-		Engine.time_scale = 0
-	
-	paused = !paused
 	
 func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")

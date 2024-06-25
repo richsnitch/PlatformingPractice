@@ -11,11 +11,9 @@ func _ready():
 func _process(delta):
 	if can_interact == true:
 		if Input.is_action_just_pressed("interact"):
-			$"FlameGuy Messages".show()
-			index += 1
-			if Input.is_action_just_pressed("interact"):
-				$"FlameGuy Messages".show()
-				index += 1
+			$Dialogue2.play(12)
+			$Dialogue.start()
+			interacting = true
 			
 func _on_player_detection_body_entered(body):
 	if body.name == "Player":
@@ -24,3 +22,6 @@ func _on_player_detection_body_entered(body):
 func _on_player_detection_body_exited(body):
 	if body.name == "Player":
 		can_interact = false
+
+func _on_dialogue_dialogue_finished():
+	interacting = false

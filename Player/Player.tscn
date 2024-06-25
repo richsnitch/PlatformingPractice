@@ -289,6 +289,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Climber"]]
+top_level = true
 script = ExtResource("1_hw1ct")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -299,7 +300,6 @@ shape = SubResource("CapsuleShape2D_c0orn")
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_7n8w6")
 animation = &"Climb"
-frame = 1
 flip_h = true
 metadata/_edit_lock_ = true
 

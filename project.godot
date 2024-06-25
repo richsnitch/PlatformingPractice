@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
-MusicController="*res://Autoloads/MusicController.tscn"
+MusicController="*res://music_controller.tscn"
 
 [input]
 

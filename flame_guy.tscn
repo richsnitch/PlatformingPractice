@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ru2ok53sgq6i"]
+[gd_scene load_steps=6 format=3 uid="uid://ru2ok53sgq6i"]
 
-[ext_resource type="Texture2D" uid="uid://b5av3pmfsx2sx" path="res://assets/flameguy.png" id="1_4bpsh"]
+[ext_resource type="Texture2D" uid="uid://cjpei4x7xsy7a" path="res://assets/flameguy.png" id="1_4bpsh"]
 [ext_resource type="Script" path="res://flame_guy.gd" id="1_c7855"]
-[ext_resource type="Script" path="res://FlameGuy Messages.gd" id="3_c0osf"]
+[ext_resource type="PackedScene" uid="uid://1grdemif473q" path="res://dialogue.tscn" id="4_bc5wk"]
+[ext_resource type="AudioStream" uid="uid://bfun0jui32qep" path="res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3" id="4_p5ob1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10yjm"]
 size = Vector2(84, 52)
@@ -21,11 +22,15 @@ position = Vector2(72, 67)
 position = Vector2(-23, -24)
 shape = SubResource("RectangleShape2D_10yjm")
 
-[node name="FlameGuy Messages" type="Label" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("3_c0osf")
+[node name="Dialogue" parent="." instance=ExtResource("4_bc5wk")]
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 16.0
+
+[node name="Dialogue2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_p5ob1")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]

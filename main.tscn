@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs27aa5rk68iy"]
+[gd_scene load_steps=4 format=3 uid="uid://bs27aa5rk68iy"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_d4l3n"]
 [ext_resource type="PackedScene" uid="uid://fricp47vgj36" path="res://bg.tscn" id="2_uev1k"]
-[ext_resource type="AudioStream" uid="uid://chbnhmo4t5idw" path="res://Music/howsthisforamainmenu.mp3" id="3_bd8tw"]
 [ext_resource type="Script" path="res://Label.gd" id="4_tpeif"]
 
 [node name="Main" type="Node2D"]
@@ -30,10 +29,6 @@ offset_bottom = 128.0
 text = "Settings"
 
 [node name="BG" parent="." instance=ExtResource("2_uev1k")]
-
-[node name="Menu Theme" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_bd8tw")
-autoplay = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 904.0

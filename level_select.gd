@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	MusicController.music = MusicController.menu_music
+	print(MusicController.music)
 
 func _on_level_1_pressed():
 	get_tree().change_scene_to_file("res://world.tscn")

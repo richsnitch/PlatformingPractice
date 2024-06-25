@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpl2cjj4bl36c"]
+[gd_scene load_steps=22 format=3 uid="uid://cpl2cjj4bl36c"]
 
 [ext_resource type="Script" path="res://bg.gd" id="1_kbghp"]
 [ext_resource type="Script" path="res://world.gd" id="1_msk1l"]
@@ -11,7 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://lm15ja1pxird" path="res://ladder.tscn" id="7_a0nbp"]
 [ext_resource type="AudioStream" uid="uid://bbwxr5omecyal" path="res://Music/jungletune.mp3" id="8_1wqgb"]
 [ext_resource type="Script" path="res://Ladders.gd" id="9_hiacv"]
+[ext_resource type="Script" path="res://ladder.gd" id="10_jh31d"]
 [ext_resource type="Script" path="res://Ladder3.gd" id="11_3ae6d"]
+[ext_resource type="PackedScene" uid="uid://c1xtmg4128d0m" path="res://music_controller.tscn" id="14_lvmhd"]
+[ext_resource type="PackedScene" uid="uid://bpq1xj72s70p7" path="res://pause_menu.tscn" id="15_jectw"]
+[ext_resource type="Texture2D" uid="uid://cnaoex688632b" path="res://assets/mcgoldcan.png" id="16_3oml0"]
+[ext_resource type="Script" path="res://McGolden1.gd" id="17_gs8jd"]
 
 [sub_resource type="GDScript" id="GDScript_6qakt"]
 script/source = "extends Label
@@ -43,6 +48,10 @@ func _process(delta):
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvekq"]
 size = Vector2(16, 208)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gg440"]
+radius = 65.6409
+height = 262.565
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_msk1l")
@@ -79,6 +88,11 @@ position = Vector2(896, 312)
 [node name="Player" parent="Player" instance=ExtResource("1_ovvri")]
 position = Vector2(248, 80)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Player"]
+
+[node name="PauseMenu" parent="Player/Player/CanvasLayer" instance=ExtResource("15_jectw")]
+visible = false
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HP" type="Label" parent="UI"]
@@ -113,7 +127,7 @@ script = ExtResource("9_hiacv")
 
 [node name="Ladder" parent="Ladders" instance=ExtResource("7_a0nbp")]
 position = Vector2(456, 392)
-script = null
+script = ExtResource("10_jh31d")
 
 [node name="Ladder2" parent="Ladders" instance=ExtResource("7_a0nbp")]
 position = Vector2(584, 296)
@@ -125,14 +139,33 @@ script = ExtResource("11_3ae6d")
 position = Vector2(776, 296)
 shape = SubResource("RectangleShape2D_lvekq")
 
-[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_1wqgb")
-autoplay = true
-
 [node name="Collect" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(416, 352)
 stream = ExtResource("7_4xuw0")
 
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1wqgb")
+autoplay = true
+
+[node name="MusicController" parent="." instance=ExtResource("14_lvmhd")]
+
+[node name="Mcgoldcan" type="Sprite2D" parent="."]
+position = Vector2(312, 344)
+scale = Vector2(0.121875, 0.121875)
+texture = ExtResource("16_3oml0")
+
+[node name="McGolden1" type="Area2D" parent="Mcgoldcan"]
+script = ExtResource("17_gs8jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mcgoldcan/McGolden1"]
+position = Vector2(-0.000250401, 0)
+shape = SubResource("CapsuleShape2D_gg440")
+
+[node name="Timer" type="Timer" parent="Mcgoldcan/McGolden1"]
+wait_time = 5.0
+
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Ladders/Ladder3" to="." method="_on_ladder_3_body_entered"]
 [connection signal="body_exited" from="Ladders/Ladder3" to="." method="_on_ladder_3_body_exited"]
+[connection signal="body_entered" from="Mcgoldcan/McGolden1" to="." method="_on_mc_golden_1_body_entered"]
+[connection signal="timeout" from="Mcgoldcan/McGolden1/Timer" to="." method="_on_timer_timeout"]

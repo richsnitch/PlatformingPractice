@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfun0jui32qep"
+path="res://.godot/imported/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3-a9874761f22167664e2bb17cee5f6b0e.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3"
+dest_files=["res://.godot/imported/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3-a9874761f22167664e2bb17cee5f6b0e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
