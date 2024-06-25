@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=27 format=3 uid="uid://cpl2cjj4bl36c"]
+=======
 [gd_scene load_steps=16 format=3 uid="uid://cpl2cjj4bl36c"]
+>>>>>>> main
 
 [ext_resource type="Script" path="res://bg.gd" id="1_kbghp"]
 [ext_resource type="Script" path="res://world.gd" id="1_msk1l"]
@@ -10,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bibf5raua0eib" path="res://Sound Effects/collect-5930.mp3" id="7_4xuw0"]
 [ext_resource type="PackedScene" uid="uid://lm15ja1pxird" path="res://ladder.tscn" id="7_a0nbp"]
 [ext_resource type="AudioStream" uid="uid://bbwxr5omecyal" path="res://Music/jungletune.mp3" id="8_1wqgb"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="9_2x18k"]
 [ext_resource type="Script" path="res://Ladders.gd" id="9_hiacv"]
 [ext_resource type="Script" path="res://Ladder3.gd" id="11_3ae6d"]
 
@@ -40,6 +45,23 @@ func _ready():
 func _process(delta):
 	text = \"Gold: \" + str(Game.gold)
 "
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ya7vn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb8t4"]
+bg_color = Color(0.664826, 0.180913, 0.242864, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onqsl"]
+bg_color = Color(0.106973, 0.122161, 0.123383, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol7lt"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvekq"]
 size = Vector2(16, 208)
@@ -101,6 +123,39 @@ theme_override_font_sizes/font_size = 24
 text = "Gold"
 script = SubResource("GDScript_rwdcd")
 
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+z_index = 1
+custom_minimum_size = Vector2(240, 10)
+offset_left = 20.0
+offset_top = 4.0
+offset_right = 260.0
+offset_bottom = 31.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_ya7vn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rb8t4")
+step = 1.0
+value = 60.0
+show_percentage = false
+script = ExtResource("9_2x18k")
+
+[node name="DamageBar" type="ProgressBar" parent="UI/HealthBar"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_onqsl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ol7lt")
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="UI/HealthBar"]
+wait_time = 0.4
+one_shot = true
+
 [node name="Collectables" type="Node2D" parent="."]
 position = Vector2(416, 352)
 script = ExtResource("6_38gwh")
@@ -133,6 +188,7 @@ autoplay = true
 position = Vector2(416, 352)
 stream = ExtResource("7_4xuw0")
 
+[connection signal="timeout" from="UI/HealthBar/Timer" to="UI/HealthBar" method="_on_timer_timeout"]
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Ladders/Ladder3" to="." method="_on_ladder_3_body_entered"]
 [connection signal="body_exited" from="Ladders/Ladder3" to="." method="_on_ladder_3_body_exited"]

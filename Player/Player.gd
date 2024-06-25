@@ -6,7 +6,13 @@ const speed_bonus = 50.0
 const climb_speed = 50
 var canClimb = false
 var isClimbing = false
+<<<<<<< HEAD
+var timer := Timer.new()
+var isPlayerDamaged = false
+var isTimerRunning = false
+=======
 var inArea
+>>>>>>> main
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -14,6 +20,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var pause_menu = $Camera2D/PauseMenu
 var paused = false
 
+#func _ready():
+	#HealthBar.init_health(Game.playerHP)
+	
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
 		pauseMenu()
@@ -73,11 +82,30 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	move_and_slide()
 	
-	
+
 	if Game.playerHP <= 0:
 		queue_free()
 		get_tree().change_scene_to_file("res://main.tscn")
 
+func _player_hurt():
+	if isPlayerDamaged == true:
+		isTimerRunning = false
+		isPlayerDamaged = false # If player damaged again, it will trigger else
+		await get_tree().create_timer(30).timeout
+		if isTimerRunning == false:
+			_player_gains_health()
+	else:
+		isPlayerDamaged = true
+		isTimerRunning = true
+		await get_tree().create_timer(30).timeout
+		if isTimerRunning == true:
+			_player_gains_health()
+	
+func _player_gains_health():
+	while Game.playerHP < 90:
+		await get_tree().create_timer(.5).timeout
+		Game.playerHP += 1
+	isPlayerDamaged = false
 
 func _player_can_climb(direction):
 	# Prevents user from continuing to climb if they release the key
@@ -106,3 +134,7 @@ func _player_jump(jump_boost):
 		velocity.y = JUMP_VELOCITY + jump_boost
 		
 	anim.play("Jump")
+
+#func _set_health(value):
+	#super._set_health(value)
+	#HealthBar.health = health

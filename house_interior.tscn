@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=5 format=3 uid="uid://dfiapj8c3nr0c"]
+=======
 [gd_scene load_steps=5 format=3 uid="uid://bv41tkkroi71f"]
+>>>>>>> main
 
 [ext_resource type="Texture2D" uid="uid://3cwagpgm71r2" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/tileset.png" id="1_18rs4"]
 [ext_resource type="PackedScene" uid="uid://crue5k3q25jpi" path="res://Player/Player.tscn" id="2_jg0ww"]

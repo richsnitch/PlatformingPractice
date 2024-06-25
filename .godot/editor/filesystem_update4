@@ -1,16 +1,28 @@
+<<<<<<< HEAD
+=======
 res://main.tscn
 res://Ladder.gd
 res://level_3.gd
 res://level_select.gd
 res://Autoloads/MusicController.gd
+>>>>>>> main
 res://world.tscn
+res://Ladder.gd
+res://HealthBar.gd
 res://Player/Player.tscn
+res://Global/Game.gd
+res://Player/Player.gd
+res://main.tscn
 res://level_2.tscn
 res://pause_menu.tscn
 res://level_select.tscn
 res://settings.tscn
+<<<<<<< HEAD
+res://house_interior.tscn
+=======
 res://level_3.tscn
 res://pause_menu.gd
 res://main.gd
 res://house_interior.tscn
 res://Player/Player.gd
+>>>>>>> main
