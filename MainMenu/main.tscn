@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs27aa5rk68iy"]
+
+[ext_resource type="Script" path="res://MainMenu/main.gd" id="1_1ewn4"]
+[ext_resource type="PackedScene" uid="uid://fricp47vgj36" path="res://bg.tscn" id="2_hid58"]
+[ext_resource type="Script" path="res://MainMenu/Label.gd" id="3_2whoh"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1ewn4")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 172.0
+offset_right = 776.0
+offset_bottom = 272.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 376.0
+offset_right = 776.0
+offset_bottom = 476.0
+text = "Quit"
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 272.0
+offset_bottom = 128.0
+text = "Settings"
+
+[node name="BG" parent="." instance=ExtResource("2_hid58")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 904.0
+offset_top = 128.0
+offset_right = 1144.0
+offset_bottom = 208.0
+text = "asdf"
+script = ExtResource("3_2whoh")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

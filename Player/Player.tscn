@@ -19,10 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://4fwquh0el8tj" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-5.png" id="13_g3huw"]
 [ext_resource type="Texture2D" uid="uid://oyiqmcqljrkk" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-6.png" id="14_gwytd"]
 [ext_resource type="AudioStream" uid="uid://cr06f4vk1wbht" path="res://Sound Effects/gun1.wav" id="19_j5827"]
+[ext_resource type="PackedScene" uid="uid://bpq1xj72s70p7" path="res://PauseMenu/pause_menu.tscn" id="19_y3ign"]
 [ext_resource type="AudioStream" uid="uid://crt7m74uay73i" path="res://Sound Effects/boing-2-44164.mp3" id="20_hi3dd"]
 [ext_resource type="AudioStream" uid="uid://dsimg2v8nxuul" path="res://Sound Effects/landing-on-grass-40650.mp3" id="21_uqu61"]
 [ext_resource type="AudioStream" uid="uid://be2e7hgopbcmb" path="res://Sound Effects/paft-drunk__zip-213628.mp3" id="22_oqxel"]
-[ext_resource type="PackedScene" uid="uid://bpq1xj72s70p7" path="res://pause_menu.tscn" id="23_iqmcr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c0orn"]
 radius = 3.0
@@ -290,6 +290,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Climber"]]
 top_level = true
+position = Vector2(9, 3)
 script = ExtResource("1_hw1ct")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -300,6 +301,7 @@ shape = SubResource("CapsuleShape2D_c0orn")
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_7n8w6")
 animation = &"Climb"
+frame = 1
 flip_h = true
 metadata/_edit_lock_ = true
 
@@ -309,12 +311,12 @@ limit_left = 0
 limit_top = 1
 limit_bottom = 576
 
-[node name="PauseMenu" parent="Camera2D" instance=ExtResource("23_iqmcr")]
+[node name="PauseMenu" parent="Camera2D" instance=ExtResource("19_y3ign")]
 visible = false
-offset_left = -35.0
-offset_top = -27.0
-offset_right = -35.0
-offset_bottom = -27.0
+offset_left = -47.0
+offset_top = -47.0
+offset_right = -47.0
+offset_bottom = -47.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

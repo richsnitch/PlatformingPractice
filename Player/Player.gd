@@ -8,18 +8,42 @@ var canClimb = false
 var isClimbing = false
 var inArea
 var used_jumppad = false
-var canMove = true
+var ladder_x_position = 0.0
+
+@onready var pause_menu = $Camera2D/PauseMenu
+var paused = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 
 	
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		pauseMenu()
+
+
+func pauseMenu():
+	if paused:
+		# Hide the pause menu
+		pause_menu.hide()
+		# Resets the in game clock back to normal speed
+		Engine.time_scale = 1
+	else:
+		# Show the pause menu
+		pause_menu.show()
+		# Set the in game clock to freeze (when the pause menu is up everything in the background stops running)
+		Engine.time_scale = 0
+	
+	paused = !paused
+	
 func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction == -1:
+		# Player is moving left
 		get_node("AnimatedSprite2D").flip_h = true
 	elif direction == 1:
+		# Player is moving right
 		get_node("AnimatedSprite2D").flip_h = false
 	if canClimb == false:
 		if not is_on_floor():
@@ -45,6 +69,7 @@ func _physics_process(delta):
 				anim.play("Idle")
 				
 	elif canClimb == true:
+		# If the player can climb, call this function
 		_player_can_climb(direction)
 			
 	if velocity.y > 0 and canClimb == false:
@@ -60,8 +85,8 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	move_and_slide()
 	
-	
 	if Game.playerHP <= 0:
+		# If the player runs out of hp, delete the player node and send them back to the main menu
 		queue_free()
 		get_tree().change_scene_to_file("res://main.tscn")
 
@@ -73,6 +98,7 @@ func _player_can_climb(direction):
 		velocity.y = -climb_speed
 		anim.play("Climb")
 		isClimbing = true
+		
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = climb_speed
 		anim.play("Climb")
@@ -85,9 +111,12 @@ func _player_can_climb(direction):
 		isClimbing = false 
 		
 func _player_jump(jump_boost):
+	# If there is no jump boost, the player is just pressing 'space'
 	if jump_boost == 0:
 		$Sounds/Jump.play()
 		velocity.y = JUMP_VELOCITY
+		
+	# If the user hits a jump pad
 	else:
 		$Sounds/JumpPad.play()
 		velocity.y = JUMP_VELOCITY + jump_boost

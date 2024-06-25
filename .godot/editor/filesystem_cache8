@@ -1,47 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719260467
-Area2D.gd::GDScript::-1::1718941272::0::1::::<>Area2D<>::
-AudioStreamPlayer.gd::GDScript::-1::1719256950::0::1::::<>AudioStreamPlayer<>::
+::res://::1719348472
 BG.gd::GDScript::-1::1715041362::0::1::::<>ParallaxBackground<>::
-bg.tscn::PackedScene::386528781670943675::1717806084::0::1::::<><>::res://bg.gd<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>uid://bgpowtvfcp7y5::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/middle.png<>uid://br8he2hav2o6b::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Colorful Environment/PNG/layers/cloud.png
-Collectables.gd::GDScript::-1::1718941272::0::1::::<>Node2D<>::
-CollisionShape2D.gd::GDScript::-1::1718941272::0::1::::<>CollisionShape2D<>::
-dialogue.gd::GDScript::-1::1719097747::0::1::::<>Control<>::
-dialogue.tscn::PackedScene::1838333976374341632::1719258141::0::1::::<><>::uid://c22ntsxdeq08x::::res://assets/textbox.png<>res://dialogue.gd<>uid://bfun0jui32qep::::res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3
-FlameGuy Messages.gd::GDScript::-1::1719075110::0::1::::<>Label<>::
-flameguy_dialogue1.json::JSON::-1::1719077020::0::1::::<><>::
-flame_guy.gd::GDScript::-1::1719097378::0::1::::<>CharacterBody2D<>::
-flame_guy.tscn::PackedScene::1236162829721244342::1719258141::0::1::::<><>::uid://cjpei4x7xsy7a::::res://assets/flameguy.png<>res://flame_guy.gd<>uid://1grdemif473q::::res://dialogue.tscn<>uid://bfun0jui32qep::::res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3
-frog.gd::GDScript::-1::1718941274::0::1::::<>CharacterBody2D<>::
-frog.tscn::PackedScene::81119494598773185::1718941274::0::1::::<><>::uid://c2j0w21lg3kv::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png<>uid://bu4472rcavrvw::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-1.png<>res://frog.gd<>uid://dsa2ttslsktto::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-2.png<>uid://c2x8f1264xhel::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png<>uid://bii6hrjp7evtx::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png<>uid://bcad07a4iq5m3::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-3.png<>uid://c7cownyayu307::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-4.png<>uid://dns6u3jaxe4n8::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-4.png<>uid://cpswnhcgxbswg::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-5.png<>uid://dtgtg2igtrjcb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-1.png<>uid://bor5cxb8f3q81::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-2.png<>uid://cch1petmprxlm::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-6.png<>uid://c80eb8l7g7bcq::::res://Sound Effects/geometry-dash-death-made-with-Voicemod.mp3<>uid://b6utocn8jqtxw::::res://Sound Effects/minecraft_hit_soundmp3converter.mp3
-house_interior.tscn::PackedScene::3921866468328644537::1719258141::0::1::::<><>::uid://3cwagpgm71r2::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/tileset.png<>uid://crue5k3q25jpi::::res://Player/Player.tscn
-icon.svg::CompressedTexture2D::8558564773583588500::1714600473::1719074611::1::::<><>::
-Jumppad1.gd::GDScript::-1::1718941272::0::1::::<>Area2D<>::
-Label.gd::GDScript::-1::1718941272::0::1::::<>Label<>::
-Ladder3.gd::GDScript::-1::1718941272::0::1::::<>Area2D<>::
-Ladder.gd::GDScript::-1::1719252163::0::1::::<>Area2D<>::
-ladder.tscn::PackedScene::798482502608579661::1718941274::0::1::::<><>::res://Ladder.gd
-Ladders.gd::GDScript::-1::1718941272::0::1::::<>Node2D<>::
-level_2.gd::GDScript::-1::1719204204::0::1::::<>Node2D<>::
-level_2.tscn::PackedScene::595030872802703735::1719258141::0::1::::<><>::res://level_2.gd<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>res://Area2D.gd<>uid://dunomv6tlmu1p::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/tileset.png<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>res://CollisionShape2D.gd<>uid://bjedl38xg54jn::::res://assets/jump pad.png<>res://Jumppad1.gd<>uid://ru2ok53sgq6i::::res://flame_guy.tscn
-level_3.gd::GDScript::-1::1719253918::0::1::::<>Node2D<>::
-level_3.tscn::PackedScene::6568037240800497108::1719258141::0::1::::<><>::res://level_3.gd<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>uid://2646j483itc0::::res://tile_map.tscn<>uid://c54ddpt1c5fw6::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/Background/sky.png<>uid://pifu2hc1w85f::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/Props/Sprites/house.png
-level_select.gd::GDScript::-1::1719254822::0::1::::<>Node2D<>::
-level_select.tscn::PackedScene::56415219560257119::1719258141::0::1::::<><>::uid://vrtolh13b2rf::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Colorful Environment/PNG/layers/background-sky.png<>res://level_select.gd<>uid://c68gxrr4ksk33::::res://Buttons/level1button.png<>uid://ny6i7p6sh5qe::::res://Buttons/level1buttonpressed.png<>uid://bbqhdki6uvaxh::::res://Buttons/level1buttonhover.png
-main.gd::GDScript::-1::1719257213::0::1::::<>Node2D<>::
-main.tscn::PackedScene::3707501059436979684::1719258140::0::1::::<><>::res://main.gd<>uid://fricp47vgj36::::res://bg.tscn<>res://Label.gd
-music_controller.tscn::PackedScene::6646407403865972898::1719258140::0::1::::<><>::res://AudioStreamPlayer.gd
-pause_menu.gd::GDScript::-1::1719257893::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::3473903620796274178::1719258141::0::1::::<><>::res://pause_menu.gd
-Settings.gd::GDScript::-1::1719253918::0::1::::<>Node2D<>::
-settings.tscn::PackedScene::4265801697391451837::1719258141::0::1::::<><>::res://Settings.gd<>uid://d2v5qmclm8thr::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Magical Road/Layers/back.png
-tile_map.tscn::PackedScene::1960911160050608905::1719074358::0::1::::<><>::uid://y0opkdsgerdf::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Tall Forest/Tall Forest Pack/Layers/tileset.png<>uid://dunomv6tlmu1p::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/tileset.png<>uid://1obcjglo34de::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/props.png
-world.gd::GDScript::-1::1719258140::0::1::::<>Node2D<>::
-world.tscn::PackedScene::5850025595576670168::1719258141::0::1::::<><>::res://bg.gd<>res://world.gd<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>uid://2646j483itc0::::res://tile_map.tscn<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>uid://bfka5kyr180l::::res://frog.tscn<>res://Collectables.gd<>uid://bibf5raua0eib::::res://Sound Effects/collect-5930.mp3<>uid://lm15ja1pxird::::res://ladder.tscn<>uid://bbwxr5omecyal::::res://Music/jungletune.mp3<>res://Ladders.gd<>res://ladder.gd<>res://Ladder3.gd<>uid://c1xtmg4128d0m::::res://music_controller.tscn<>uid://bpq1xj72s70p7::::res://pause_menu.tscn
-::res://assets/::1719260307
+house_interior.tscn::PackedScene::7535484713150394394::1719348448::0::1::::<><>::uid://3cwagpgm71r2::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/tileset.png<>uid://crue5k3q25jpi::::res://Player/Player.tscn
+::res://assets/::1719348355
 flameguy.png::CompressedTexture2D::5435765340954756576::1719074350::1719074350::1::::<><>::
 jump pad.png::CompressedTexture2D::3026581104849480355::1718941274::1718941274::1::::<><>::
+Jumppad1.gd::GDScript::-1::1718941272::0::1::::<>Area2D<>::
 mcgoldcan.png::CompressedTexture2D::5686154773225683183::1719260297::1719260307::1::::<><>::
+McGolden1.gd::GDScript::-1::1719260731::0::1::::<>Area2D<>::
 textbox.png::CompressedTexture2D::6724502577055962173::1719076085::1719076099::1::::<><>::
 ::res://Autoloads/::1719254014
 MusicController.gd::GDScript::-1::1719254014::0::1::::<>Node2D<>::
@@ -50,28 +16,70 @@ MusicController.tscn::PackedScene::2528722610819554325::1718941272::0::1::::<><>
 level1button.png::CompressedTexture2D::7017226281755928204::1718941272::1718941272::1::::<><>::
 level1buttonhover.png::CompressedTexture2D::2490070486755157597::1718941272::1718941272::1::::<><>::
 level1buttonpressed.png::CompressedTexture2D::963898251870988564::1718941272::1718941272::1::::<><>::
-::res://Collectables/::1718941272
-cherry.gd::GDScript::-1::1718941272::0::1::::<>Area2D<>::
+::res://Collectables/::1719347815
+cherry.gd::GDScript::-1::1719261909::0::1::::<>Area2D<>::
 cherry.tscn::PackedScene::4072606220472771755::1718941272::0::1::::<><>::uid://dchjs0lx31k51::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-1.png<>res://Collectables/cherry.gd<>uid://dojqqrf11vpl0::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-2.png<>uid://b1yw8d5wcdhfq::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-3.png<>uid://dupvwpaukcpdn::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-4.png<>uid://db4bt5px0cmfw::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-5.png<>uid://duvv13xuj6emd::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-6.png<>uid://c7assymwyg1pq::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/cherry/cherry-7.png<>uid://bibf5raua0eib::::res://Sound Effects/collect-5930.mp3
-::res://Global/::1718940430
+Collectables.gd::GDScript::-1::1718941272::0::1::::<>Node2D<>::
+::res://Enemies/::1719348433
+frog.gd::GDScript::-1::1718941274::0::1::::<>CharacterBody2D<>::
+frog.tscn::PackedScene::81119494598773185::1719348429::0::1::::<><>::uid://c2j0w21lg3kv::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png<>uid://bu4472rcavrvw::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-1.png<>res://Enemies/frog.gd<>uid://dsa2ttslsktto::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-2.png<>uid://c2x8f1264xhel::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-2.png<>uid://bii6hrjp7evtx::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-3.png<>uid://bcad07a4iq5m3::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-3.png<>uid://c7cownyayu307::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-4.png<>uid://dns6u3jaxe4n8::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/idle/frog-idle-4.png<>uid://cpswnhcgxbswg::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-5.png<>uid://dtgtg2igtrjcb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-1.png<>uid://bor5cxb8f3q81::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/frog/jump/frog-jump-2.png<>uid://cch1petmprxlm::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/enemy-death/enemy-death-6.png<>uid://c80eb8l7g7bcq::::res://Sound Effects/geometry-dash-death-made-with-Voicemod.mp3<>uid://b6utocn8jqtxw::::res://Sound Effects/minecraft_hit_soundmp3converter.mp3
+::res://FlameGuy/::1719348448
+dialogue.gd::GDScript::-1::1719097747::0::1::::<>Control<>::
+dialogue.tscn::PackedScene::1838333976374341632::1719347916::0::1::::<><>::uid://c22ntsxdeq08x::::res://assets/textbox.png<>res://FlameGuy/dialogue.gd<>uid://bfun0jui32qep::::res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3
+FlameGuy Messages.gd::GDScript::-1::1719075110::0::1::::<>Label<>::
+flameguy_dialogue1.json::JSON::-1::1719077020::0::1::::<><>::
+flame_guy.gd::GDScript::-1::1719347689::0::1::::<>CharacterBody2D<>::
+flame_guy.tscn::PackedScene::1236162829721244342::1719348448::0::1::::<><>::uid://cjpei4x7xsy7a::::res://assets/flameguy.png<>res://FlameGuy/flame_guy.gd<>uid://1grdemif473q::::res://FlameGuy/dialogue.tscn<>uid://bfun0jui32qep::::res://Sound Effects/generic-2-dialogue-sound-effect-(undertale-character-voice-beep-made-with-Voicemod.mp3
+::res://Global/::1719348448
+AudioStreamPlayer.gd::GDScript::-1::1719347689::0::1::::<>AudioStreamPlayer<>::
 Game.gd::GDScript::-1::1716410947::0::1::::<>Node<>::
+music_controller.tscn::PackedScene::6646407403865972898::1719348448::0::1::::<><>::res://Global/AudioStreamPlayer.gd
 Utils.gd::GDScript::-1::1716411163::0::1::::<>Node<>::
+::res://Ladders/::1719348449
+Ladder.gd::GDScript::-1::1719344917::0::1::::<>Area2D<>::
+ladder.tscn::PackedScene::926376291534292735::1719348448::0::1::::<><>::res://Ladders/Ladder.gd
+TallLadder.gd::GDScript::-1::1719345209::0::1::::<>Area2D<>::
+tall_ladder.tscn::PackedScene::7255482731989397281::1719348449::0::1::::<><>::res://Ladders/TallLadder.gd
+::res://Level1/::1719348449
+tile_map.tscn::PackedScene::1960911160050608905::1719348449::0::1::::<><>::uid://y0opkdsgerdf::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Tall Forest/Tall Forest Pack/Layers/tileset.png<>uid://dunomv6tlmu1p::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/tileset.png<>uid://1obcjglo34de::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/props.png
+world.gd::GDScript::-1::1719347689::0::1::::<>Node2D<>::
+world.tscn::PackedScene::5850025595576670168::1719348448::0::1::::<><>::res://Level1/world.gd<>uid://2646j483itc0::::res://Level1/tile_map.tscn<>res://bg.gd<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>uid://bfka5kyr180l::::res://Enemies/frog.tscn<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>res://Collectables/Collectables.gd<>uid://bibf5raua0eib::::res://Sound Effects/collect-5930.mp3<>uid://bbwxr5omecyal::::res://Music/jungletune.mp3<>uid://c1xtmg4128d0m::::res://Global/music_controller.tscn<>uid://cnaoex688632b::::res://assets/mcgoldcan.png<>res://assets/McGolden1.gd<>uid://ng0jugwl27yh::::res://Ladders/ladder.tscn<>uid://dbmu0gc3n3p26::::res://Ladders/tall_ladder.tscn
+::res://Level2/::1719348448
+level_2.gd::GDScript::-1::1719346688::0::1::::<>Node2D<>::
+level_2.tscn::PackedScene::595030872802703735::1719348448::0::1::::<><>::res://Level2/level_2.gd<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>uid://dunomv6tlmu1p::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/tileset.png<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>uid://bjedl38xg54jn::::res://assets/jump pad.png<>res://assets/Jumppad1.gd<>uid://ru2ok53sgq6i::::res://FlameGuy/flame_guy.tscn<>uid://dbmu0gc3n3p26::::res://Ladders/tall_ladder.tscn
+::res://Level3/::1719348448
+level_3.gd::GDScript::-1::1719347689::0::1::::<>Node2D<>::
+level_3.tscn::PackedScene::6568037240800497108::1719348448::0::1::::<><>::res://Level3/level_3.gd<>uid://crue5k3q25jpi::::res://Player/Player.tscn<>uid://2646j483itc0::::res://Level1/tile_map.tscn<>uid://c54ddpt1c5fw6::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/Background/sky.png<>uid://pifu2hc1w85f::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Winter Pack/ENVIRONMENT/Props/Sprites/house.png
+::res://LevelSelect/::1719348448
+level_select.gd::GDScript::-1::1719347689::0::1::::<>Node2D<>::
+level_select.tscn::PackedScene::56415219560257119::1719348448::0::1::::<><>::res://LevelSelect/level_select.gd<>uid://vrtolh13b2rf::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Colorful Environment/PNG/layers/background-sky.png<>uid://c68gxrr4ksk33::::res://Buttons/level1button.png<>uid://ny6i7p6sh5qe::::res://Buttons/level1buttonpressed.png<>uid://bbqhdki6uvaxh::::res://Buttons/level1buttonhover.png
+::res://MainMenu/::1719348472
+bg.tscn::PackedScene::386528781670943675::1719348449::0::1::::<><>::res://bg.gd<>uid://bw1ivcmvdmb::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png<>uid://bgpowtvfcp7y5::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/middle.png<>uid://br8he2hav2o6b::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Colorful Environment/PNG/layers/cloud.png
+Label.gd::GDScript::-1::1718941272::0::1::::<>Label<>::
+main.gd::GDScript::-1::1719348124::0::1::::<>Node2D<>::
+main.tscn::PackedScene::3707501059436979684::1719348481::0::1::::<><>::res://MainMenu/main.gd<>uid://fricp47vgj36::::res://MainMenu/bg.tscn<>res://MainMenu/Label.gd
 ::res://Music/::1719203824
 cafemoonlight.mp3::AudioStreamMP3::1031411466774810085::1718941272::1718941272::1::::<><>::
 didyoufindeverythingokay.mp3::AudioStreamMP3::7544168078277826571::1719074358::1719203824::1::::<><>::
 howsthisforamainmenu.mp3::AudioStreamMP3::5267030125321456604::1718941272::1718941272::1::::<><>::
 jungletune.mp3::AudioStreamMP3::2503454285128903355::1718941272::1718941272::1::::<><>::
 Uwa_So_Rich.mp3::AudioStreamMP3::2274171937246637617::1718941272::1718941272::1::::<><>::
-::res://Player/::1719258141
-Player.gd::GDScript::-1::1719258043::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6007636275354423882::1719258141::0::1::::<><>::res://Player/Player.gd<>uid://bxxdw3et5frcf::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png<>uid://oqrcfthdfghy::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-1.png<>uid://uvrcson1o8m2::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png<>uid://chg2gqj33t4yt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-2.png<>uid://bpgdayd8xfold::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-1.png<>uid://pa5dls74g6g::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-3.png<>uid://dil2feqk5hxbt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-2.png<>uid://1dcvngbjskt1::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-3.png<>uid://bs43c3scldwp8::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-4.png<>uid://blmwrfer5vphu::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/jump/player-jump-1.png<>uid://cacpl7jj8cfko::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/jump/player-jump-2.png<>uid://dgskh7mb8et0m::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-1.png<>uid://3py2gihbx62l::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-2.png<>uid://dpsxbyncuvwkt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-3.png<>uid://1fjsmrp37e7c::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-4.png<>uid://4fwquh0el8tj::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-5.png<>uid://oyiqmcqljrkk::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-6.png<>uid://cr06f4vk1wbht::::res://Sound Effects/gun1.wav<>uid://crt7m74uay73i::::res://Sound Effects/boing-2-44164.mp3<>uid://dsimg2v8nxuul::::res://Sound Effects/landing-on-grass-40650.mp3<>uid://be2e7hgopbcmb::::res://Sound Effects/paft-drunk__zip-213628.mp3<>uid://bpq1xj72s70p7::::res://pause_menu.tscn
-::res://ScrupSprites/::1719260505
+::res://PauseMenu/::1719348448
+pause_menu.gd::GDScript::-1::1719257893::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::3473903620796274178::1719348448::0::1::::<><>::res://PauseMenu/pause_menu.gd
+::res://Player/::1719348448
+Player.gd::GDScript::-1::1719347210::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6007636275354423882::1719348448::0::1::::<><>::res://Player/Player.gd<>uid://bxxdw3et5frcf::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png<>uid://oqrcfthdfghy::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-1.png<>uid://uvrcson1o8m2::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png<>uid://chg2gqj33t4yt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-2.png<>uid://bpgdayd8xfold::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-1.png<>uid://pa5dls74g6g::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/climb/player-climb-3.png<>uid://dil2feqk5hxbt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-2.png<>uid://1dcvngbjskt1::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-3.png<>uid://bs43c3scldwp8::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/idle/player-idle-4.png<>uid://blmwrfer5vphu::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/jump/player-jump-1.png<>uid://cacpl7jj8cfko::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/jump/player-jump-2.png<>uid://dgskh7mb8et0m::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-1.png<>uid://3py2gihbx62l::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-2.png<>uid://dpsxbyncuvwkt::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-3.png<>uid://1fjsmrp37e7c::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-4.png<>uid://4fwquh0el8tj::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-5.png<>uid://oyiqmcqljrkk::::res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-6.png<>uid://cr06f4vk1wbht::::res://Sound Effects/gun1.wav<>uid://bpq1xj72s70p7::::res://PauseMenu/pause_menu.tscn<>uid://crt7m74uay73i::::res://Sound Effects/boing-2-44164.mp3<>uid://dsimg2v8nxuul::::res://Sound Effects/landing-on-grass-40650.mp3<>uid://be2e7hgopbcmb::::res://Sound Effects/paft-drunk__zip-213628.mp3
+::res://ScrupSprites/::1719260506
 scrupcrouch-Sheet.png::CompressedTexture2D::1833989253835485955::1719260485::1719260487::1::::<><>::
 scrupdeath-Sheet.png::CompressedTexture2D::1464553148182496297::1719260490::1719260492::1::::<><>::
 scrupidle-Sheet.png::CompressedTexture2D::3097828516539242275::1719260477::1719260479::1::::<><>::
 scrupjump-Sheet.png::CompressedTexture2D::3537506343704931625::1719260495::1719260497::1::::<><>::
 scruprun-Sheet.png::CompressedTexture2D::6866208555049570450::1719260505::1719260506::1::::<><>::
 scrupwalk-Sheet.png::CompressedTexture2D::643504583623568868::1719260500::1719260502::1::::<><>::
+::res://Settings/::1719348448
+Settings.gd::GDScript::-1::1719347689::0::1::::<>Node2D<>::
+settings.tscn::PackedScene::4265801697391451837::1719348448::0::1::::<><>::res://Settings/Settings.gd<>uid://d2v5qmclm8thr::::res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Magical Road/Layers/back.png
 ::res://Sound Effects/::1719080258
 boing-2-44164.mp3::AudioStreamMP3::6007240986311496384::1718941272::1718941272::1::::<><>::
 collect-5930.mp3::AudioStreamMP3::2950353863139047529::1718941272::1718941272::1::::<><>::
