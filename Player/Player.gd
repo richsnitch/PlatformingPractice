@@ -105,4 +105,5 @@ func _player_jump(jump_boost):
 		$Sounds/JumpPad.play()
 		velocity.y = JUMP_VELOCITY + jump_boost
 		
+		
 	anim.play("Jump")
