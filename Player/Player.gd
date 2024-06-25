@@ -6,9 +6,13 @@ const speed_bonus = 50.0
 const climb_speed = 50
 var canClimb = false
 var isClimbing = false
+<<<<<<< HEAD
 var timer := Timer.new()
 var isPlayerDamaged = false
 var isTimerRunning = false
+=======
+var inArea
+>>>>>>> main
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
