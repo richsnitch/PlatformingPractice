@@ -1,3 +1,5 @@
+Timer
+ProgressBar
 Label
 Button
 Control
@@ -11,5 +13,3 @@ Node2D
 TileMap
 ParallaxBackground
 Sprite2D
-Timer
-AnimatedSprite2D
