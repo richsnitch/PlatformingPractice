@@ -38,7 +38,7 @@ func pauseMenu():
 	paused = !paused
 	
 func _physics_process(delta):
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction == -1:
 		# Player is moving left
 		get_node("AnimatedSprite2D").flip_h = true
@@ -78,7 +78,7 @@ func _physics_process(delta):
 		anim.play("Jump")
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		_player_jump(0)
 
 	# Get the input direction and handle the movement/deceleration.
@@ -94,19 +94,19 @@ func _physics_process(delta):
 func _player_can_climb(direction):
 	# Prevents user from continuing to climb if they release the key
 	velocity.y = 0
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("climb_up"):
 		velocity.y = -climb_speed
 		anim.play("Climb")
 		isClimbing = true
 		
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("climb_down"):
 		velocity.y = climb_speed
 		anim.play("Climb")
 		isClimbing = true
 	# If the player has reached the floor, allow them to walk/sprint again
 	elif is_on_floor():
 		anim.play("Idle")
-		direction = Input.get_axis("ui_left", "ui_right")
+		direction = Input.get_axis("move_left", "move_right")
 		velocity.x = direction * SPEED
 		isClimbing = false 
 		

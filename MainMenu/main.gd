@@ -1,9 +1,13 @@
 extends Node2D
 
+@onready var play_button = $Play as Button
+@onready var quit_buttion = $Quit as Button
+@onready var settings_button = $Settings as Button
+
 func _ready():
-	Utils.saveGame()
+	#Utils.saveGame()
 	MusicController.play_menu_music()
-	Utils.loadGame()
+	#Utils.loadGame()
 	# Resets time scale (game's clock speed) to 1. Did this on ready because
 	# to ensure the game was always running at the proper speed from the menu
 	Engine.time_scale = 1
@@ -16,3 +20,4 @@ func _on_play_pressed():
 
 func _on_settings_pressed():
 	get_tree().change_scene_to_file("res://Settings/settings.tscn")
+

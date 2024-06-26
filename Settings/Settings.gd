@@ -6,6 +6,6 @@ func _ready():
 	# Play settings music
 	MusicController.play_settings_music()
 
-func _on_main_menu_pressed():
-	# Go back to main menu
+
+func _on_main_menu_button_down():
 	get_tree().change_scene_to_file("res://MainMenu/main.tscn")

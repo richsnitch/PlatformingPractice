@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b11nepduvx1an"]
+[gd_scene load_steps=6 format=3 uid="uid://b11nepduvx1an"]
 
 [ext_resource type="Script" path="res://Settings/Settings.gd" id="1_scv46"]
 [ext_resource type="Texture2D" uid="uid://d2v5qmclm8thr" path="res://Sunny Land/Sunny Land Collection Files/Packs/Environments/Magical Road/Layers/back.png" id="2_i3npc"]
+[ext_resource type="Script" path="res://Settings/Control.gd" id="3_4wb2q"]
+[ext_resource type="PackedScene" uid="uid://detmlnr7gd12c" path="res://settings_tab_container.tscn" id="4_eqbno"]
+
+[sub_resource type="SystemFont" id="SystemFont_r17b5"]
+font_names = PackedStringArray("Comic Sans MS")
 
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_scv46")
@@ -11,11 +16,50 @@ position = Vector2(576, 324)
 scale = Vector2(10.2857, 2.7)
 texture = ExtResource("2_i3npc")
 
-[node name="Main Menu" type="Button" parent="."]
-offset_left = 40.0
-offset_top = 48.0
-offset_right = 208.0
-offset_bottom = 112.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_4wb2q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -48
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_r17b5")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Tab_Container" parent="Control/MarginContainer/VBoxContainer" instance=ExtResource("4_eqbno")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Main Menu" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
 text = "Main Menu"
 
-[connection signal="pressed" from="Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="button_down" from="Control/MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_button_down"]
