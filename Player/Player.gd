@@ -10,7 +10,7 @@ var inArea
 var used_jumppad = false
 var ladder_x_position = 0.0
 
-@onready var pause_menu = $Camera2D/PauseMenu
+@onready var pause_menu = $"../../Camera2D/PauseMenu"
 var paused = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -31,6 +31,7 @@ func pauseMenu():
 		Engine.time_scale = 1
 	else:
 		# Show the pause menu
+		print('hi')
 		pause_menu.show()
 		# Set the in game clock to freeze (when the pause menu is up everything in the background stops running)
 		Engine.time_scale = 0

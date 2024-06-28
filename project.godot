@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
 MusicController="*res://Global/music_controller.tscn"
+SignalBus="*res://Autoloads/SignalBus.gd"
 
 [input]
 

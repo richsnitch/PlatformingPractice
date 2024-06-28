@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://crue5k3q25jpi"]
+[gd_scene load_steps=33 format=3 uid="uid://crue5k3q25jpi"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_hw1ct"]
 [ext_resource type="Texture2D" uid="uid://bxxdw3et5frcf" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/hurt/player-hurt-1.png" id="1_ryjbd"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://4fwquh0el8tj" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-5.png" id="13_g3huw"]
 [ext_resource type="Texture2D" uid="uid://oyiqmcqljrkk" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/sprites/player/run/player-run-6.png" id="14_gwytd"]
 [ext_resource type="AudioStream" uid="uid://cr06f4vk1wbht" path="res://Sound Effects/gun1.wav" id="19_j5827"]
-[ext_resource type="PackedScene" uid="uid://bpq1xj72s70p7" path="res://PauseMenu/pause_menu.tscn" id="19_y3ign"]
 [ext_resource type="AudioStream" uid="uid://crt7m74uay73i" path="res://Sound Effects/boing-2-44164.mp3" id="20_hi3dd"]
 [ext_resource type="AudioStream" uid="uid://dsimg2v8nxuul" path="res://Sound Effects/landing-on-grass-40650.mp3" id="21_uqu61"]
 [ext_resource type="AudioStream" uid="uid://be2e7hgopbcmb" path="res://Sound Effects/paft-drunk__zip-213628.mp3" id="22_oqxel"]
@@ -311,13 +310,6 @@ limit_left = 0
 limit_top = 1
 limit_bottom = 576
 
-[node name="PauseMenu" parent="Camera2D" instance=ExtResource("19_y3ign")]
-visible = false
-offset_left = -47.0
-offset_top = -47.0
-offset_right = -47.0
-offset_bottom = -47.0
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7roql")
@@ -328,12 +320,16 @@ autoplay = "Idle"
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("19_j5827")
+bus = &"SFX"
 
 [node name="JumpPad" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("20_hi3dd")
+bus = &"SFX"
 
 [node name="Landing" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("21_uqu61")
+bus = &"SFX"
 
 [node name="Accelerate" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("22_oqxel")
+bus = &"SFX"

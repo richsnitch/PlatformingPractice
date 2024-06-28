@@ -1,15 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://cpl2cjj4bl36c"]
+[gd_scene load_steps=17 format=3 uid="uid://cpl2cjj4bl36c"]
 
 [ext_resource type="Script" path="res://Level1/world.gd" id="1_sgy6c"]
 [ext_resource type="PackedScene" uid="uid://2646j483itc0" path="res://Level1/tile_map.tscn" id="2_thve4"]
+[ext_resource type="PackedScene" uid="uid://bpq1xj72s70p7" path="res://PauseMenu/pause_menu.tscn" id="2_ugom2"]
 [ext_resource type="Script" path="res://bg.gd" id="3_ghakp"]
 [ext_resource type="Texture2D" uid="uid://bw1ivcmvdmb" path="res://Sunny Land/Sunny Land Collection Files/Packs/Packs/Sunnyland/environment/Background/back.png" id="4_hn0s7"]
 [ext_resource type="PackedScene" uid="uid://bfka5kyr180l" path="res://Enemies/frog.tscn" id="5_j48gv"]
 [ext_resource type="PackedScene" uid="uid://crue5k3q25jpi" path="res://Player/Player.tscn" id="6_m3lk5"]
 [ext_resource type="Script" path="res://Collectables/Collectables.gd" id="7_2c758"]
 [ext_resource type="AudioStream" uid="uid://bibf5raua0eib" path="res://Sound Effects/collect-5930.mp3" id="8_er5tm"]
-[ext_resource type="AudioStream" uid="uid://bbwxr5omecyal" path="res://Music/jungletune.mp3" id="9_stco4"]
-[ext_resource type="PackedScene" uid="uid://c1xtmg4128d0m" path="res://Global/music_controller.tscn" id="10_65jlh"]
 [ext_resource type="Texture2D" uid="uid://cnaoex688632b" path="res://assets/mcgoldcan.png" id="11_kp0ie"]
 [ext_resource type="Script" path="res://assets/McGolden1.gd" id="12_bx0ji"]
 [ext_resource type="PackedScene" uid="uid://ng0jugwl27yh" path="res://Ladders/ladder.tscn" id="13_5o8w4"]
@@ -116,12 +115,7 @@ autostart = true
 [node name="Collect" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(416, 352)
 stream = ExtResource("8_er5tm")
-
-[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_stco4")
-autoplay = true
-
-[node name="MusicController" parent="." instance=ExtResource("10_65jlh")]
+bus = &"SFX"
 
 [node name="Mcgoldcan" type="Sprite2D" parent="."]
 position = Vector2(312, 344)
@@ -146,6 +140,16 @@ position = Vector2(544, 176)
 
 [node name="TallLadder" parent="." instance=ExtResource("14_sd4dm")]
 position = Vector2(696, 160)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PauseMenu" parent="Camera2D" instance=ExtResource("2_ugom2")]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+offset_left = -112.0
+offset_top = -112.0
+offset_right = 608.0
+offset_bottom = 296.0
 
 [connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Mcgoldcan/McGolden1" to="." method="_on_mc_golden_1_body_entered"]

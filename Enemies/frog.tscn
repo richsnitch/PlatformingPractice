@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://c80eb8l7g7bcq" path="res://Sound Effects/geometry-dash-death-made-with-Voicemod.mp3" id="14_5nfqs"]
 [ext_resource type="AudioStream" uid="uid://b6utocn8jqtxw" path="res://Sound Effects/minecraft_hit_soundmp3converter.mp3" id="15_nvcex"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mnddu"]
 size = Vector2(20, 12)
 
@@ -116,9 +115,11 @@ shape = SubResource("RectangleShape2D_nhasy")
 
 [node name="DeathSoundEffect" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("14_5nfqs")
+bus = &"SFX"
 
 [node name="Hurt" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("15_nvcex")
+bus = &"SFX"
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
